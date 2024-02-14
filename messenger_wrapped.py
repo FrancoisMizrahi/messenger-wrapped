@@ -1,2 +1,7 @@
 import streamlit as st
-import pandas as pd
+
+from utils import upload_file
+
+st.title('Messenger Wrapped')
+
+upload_file()
