@@ -2,15 +2,18 @@ import streamlit as st
 
 from utils.utils import upload_file
 from visualization import Visualization
+from components import info_find_messenger_data
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(layout="wide")
 
 col1, maincol, col2 = st.columns([1, 4, 1])
+
 with maincol:
     st.title('Messenger Wrapped')
 
     data = upload_file()
+    info_find_messenger_data()
 
     if data:
         st.header("Visualizations")
